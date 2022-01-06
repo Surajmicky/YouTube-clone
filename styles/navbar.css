@@ -1,0 +1,64 @@
+/** @format */
+
+#navbar {
+  height: 56px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+}
+#hamburger {
+  height: 20px;
+  margin: 0 2.1% 0 1.4%;
+}
+#searchbox {
+  height: 40px;
+  width: 90%;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 2px;
+  font-size: 18px;
+  padding-inline-start: 20px;
+}
+input[type="text"]:focus {
+  outline: 1px solid rgb(145, 142, 140);
+}
+#logodiv {
+  height: 38px;
+  margin-right: 16%;
+  padding-top: 20px;
+}
+
+#searchdiv {
+  width: 41%;
+  align-items: center;
+  border: 1px solid transparent;
+  display: flex;
+}
+#searchicon {
+  height: 42px;
+  width: 10%;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(248, 248, 248);
+  border-radius: 3px;
+  margin-left: 1px;
+}
+#searchicon[type="div"]:focus {
+  background: 1px solid rgb(145, 142, 140);
+}
+.navimg {
+  height: 24px;
+  border: 1px solid transparent;
+  margin: 9px 0px 0px 16px;
+}
+#navcreate {
+  margin-left: 14%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  gap: 25px;
+
+  width: 13%;
+}
+.create {
+  height: 25px;
+}
