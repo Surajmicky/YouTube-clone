@@ -1,0 +1,120 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/df3209e6/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/df3209e6/img/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/df3209e6/img/favicon_48x48.png" sizes="48x48">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/df3209e6/img/favicon_96x96.png" sizes="96x96">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/df3209e6/img/favicon_144x144.png" sizes="144x144">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/sidenav.css">
+    <style>
+        *{
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        #body_container{
+            margin-top: 0px;
+        }
+       
+        #container{
+            display: flex;
+            height: 1000px;
+            
+        }
+        #side_nav{
+            flex:2;
+            margin-right: 10px;
+            border: 1px solid transparent;
+            height: 100%;
+        }
+        #display{
+            flex:11;
+            border: 1px solid transparent;
+            height: 100%;
+        }
+        #videos_box{
+            width: 100%;
+            border: 1px solid transparent;
+            background: rgb(249,249,249);
+            height: 95%;
+            }
+        
+        #suggestion_topic{
+            height: 56px;
+            border-top:1px solid rgb(204,204,204);
+            border-bottom:1px solid rgb(204,204,204);
+            align-items: center;
+            display: flex;
+            gap: 20px;
+        }
+        .suggestions{
+            border: 1px solid rgb(204,204,204);
+            height: 40px;
+            padding:10px;
+            white-space: nowrap;
+
+            background:rgb(233, 231, 231) ;
+            border-radius: 20px;
+            color: rgb(26, 25, 25);
+        }
+        body{
+            margin:0px
+        }
+     
+    </style>
+</head>
+<body>
+    <div id="body_container">
+      <div id="navappend"></div>
+        </div>
+        <div id="container">
+            <div id="side_nav">
+                <div id="sidenav_options">
+                    <div style="background: rgb(229,229,229);" class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/home.png" alt=""></div><div class="sidenavdiv1">Home </div></div>
+                    <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/compass.png" alt=""></div><div class="sidenavdiv1">Explore </div></div>
+                    <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/subscribe.png" alt=""></div><div class="sidenavdiv1">Subscriptions </div></div>
+                    <div id="betweendiv"></div> 
+                <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/library.png" alt=""></div><div class="sidenavdiv1">Library </div></div>
+                     <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/history.png" alt=""></div><div class="sidenavdiv1">History </div></div>
+                <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/youtube.png" alt=""></div><div class="sidenavdiv1">Your Videos </div></div>
+                     <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/wall-clock.png" alt=""></div><div class="sidenavdiv1">Watch Later </div></div>
+                <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/flag-or-text-lines-with-a-video.png" alt=""></div><div class="sidenavdiv1">Saved Videos </div></div>
+                <div class="sidenav_option"div><div class="sideicondiv"><img class=sideicon src="/youtube_app/icons/down-arrow.png" alt=""></div><div class="sidenavdiv1">Show More </div></div>
+                    
+                </div>
+                <div>
+                    SUBSCRIPTIONS
+                </div>
+            </div>
+            <div id="display">
+                <div id="suggestion_topic">
+                    <button  style="background: rgb(29, 29, 29); color: white;" class="suggestions">All</button>
+                   <button class="suggestions">Full-Stack</button>
+                   <button class="suggestions">Motivation</button>
+                   <button class="suggestions">Data Structure</button>
+                   <button class="suggestions">Artificial Intelligence</button>
+                   <button class="suggestions">Dance</button>
+                   <button class="suggestions">Bollywood</button>
+                   <button class="suggestions">Chris-Helmsworth</button>
+                   <button class="suggestions">Stock Market</button>
+                   <button class="suggestions">Fitness</button>
+                   <button class="suggestions">Top 100 Songs</button>
+                </div>
+                <div id="videos_box"></div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+<script type="module">
+    import navbar from './components/navbar.js';
+    document.getElementById('navappend').innerHTML=navbar();
+</script>
+</html>
