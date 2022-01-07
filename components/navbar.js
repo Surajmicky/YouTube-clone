@@ -3,7 +3,7 @@
 function navbar() {
   return `  <div id="navbar">
     <div id="hamburger">
-    <img style="height: 100%;" src="/youtube_app/icons/hamburger.png" alt="">
+    <img style="height: 100%;" src="./icons/hamburger.png" alt="">
    </div>
     <div id="logodiv">
         <img  style="height: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png" alt="">
