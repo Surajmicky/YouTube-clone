@@ -93,8 +93,9 @@
         margin: 0px;
       }
       #videos_box > div{
-        height:202px;
-        border: 1px solid transparent;
+        height:400px;
+        width: 140px;
+        border: 1px solid blue;
         margin:20px 150px 0px 60px;
        
         
@@ -182,15 +183,20 @@
       });
 
     function call() {
-      let data_div = document.getElementById("videos_box");
+      let video_query = document.getElementById("searchbox").value;
+      localStorage.setItem("search",JSON.stringify(video_query));
+      window.location.href="./search.html";
+    }
+
+    let data_div = document.getElementById("videos_box");
       data_div.innerHTML="";
 
-      let video_query = document.getElementById("searchbox").value;
+     
 
-      console.log(video_query);
+     
 
       let response = getData(
-        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=35&q=${video_query}&type=video&key=AIzaSyBDYMjwqp3uGRIFlkURMzDYQ22uHgqtE-8`
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=35&q=india&type=video&key=AIzaSyDoArJw2TLCT6dgFmMK6tVvWSdCgxZd5Ag`
       );
       response.then((res) => {
         res=res.items;
@@ -201,11 +207,6 @@
       response.catch((err) => {
         console.log(err);
       });
-    }
-   //https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=India&key=
-
-
-
-    //https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=35&q=${video_query}&type=video&key=AIzaSyBDYMjwqp3uGRIFlkURMzDYQ22uHgqtE-8
+      
   </script>
 </html>

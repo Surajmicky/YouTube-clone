@@ -31,3 +31,61 @@
   height: 20px;
   margin-left: 20px;
 }
+* {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+#body_container {
+  margin-top: 0px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+#side_nav {
+  flex: 2;
+  margin-right: 10px;
+  border: 1px solid transparent;
+  height: 100%;
+}
+#display {
+  flex: 11;
+  border: 1px solid transparent;
+  height: 100%;
+}
+#videos_box {
+  width: 100%;
+  border: 1px solid transparent;
+  background: rgb(249, 249, 249);
+  height: 95%;
+  height:580px;
+  overflow-y:scroll;
+}
+
+#suggestion_topic {
+  height: 56px;
+  border-top: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+.suggestions {
+  border: 1px solid rgb(204, 204, 204);
+  height: 40px;
+  padding: 10px;
+  white-space: nowrap;
+
+  background: rgb(233, 231, 231);
+  border-radius: 20px;
+  color: rgb(26, 25, 25);
+}
+.suggestions:hover{
+  background: rgb(29, 29, 29);
+  color: white;
+}
+body {
+  margin: 0px;
+}
