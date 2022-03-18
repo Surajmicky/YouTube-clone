@@ -23,9 +23,11 @@ function appendData(data,location){
     data.forEach(element => {
 
         let { id:{videoId},snippet:{channelTitle,description,thumbnails:{high:{url}},title}} =element;
-
+  
         let videobox= document.createElement('div');
 
+        //  videobox.addEventListener('click','display')
+         
         videobox.setAttribute('id','videobox');
 
         let thumbnail_div = document.createElement('div');

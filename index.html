@@ -58,14 +58,7 @@
         border: 1px solid transparent;
         height: 100%;
       }
-      #videos_box {
-        width: 100%;
-        border: 1px solid transparent;
-        background: rgb(249, 249, 249);
-        height: 95%;
-        height:580px;
-        overflow-y:scroll;
-      }
+     
 
       #suggestion_topic {
         height: 56px;
@@ -92,44 +85,49 @@
       body {
         margin: 0px;
       }
-      #videos_box > div{
-        height:400px;
-        width: 140px;
-        border: 1px solid blue;
-        margin:20px 150px 0px 60px;
-       
-        
-      }#thumbnail{
+     
+      #thumbnail{ 
         height: 100%;
         width:360px;
         
       }
-      #videobox{
-        display: flex;
+      #videos_box{
+       display:grid;
+       grid-template-columns:repeat(3,400px);
+       
+       grid-gap:5px;
+       
+       
       }
+     #videos_box img{
+       border-radius:1px;
+     }
       #videobox:hover{
         cursor: pointer;
       }
-      #thumbnail_div{
-        height: 100%;
-      }
+     
       #detail_div{
-        height: 100%;
+        display:flex;
+        flex-direction: column;
         padding-left:30px;
         
       }
       #name{
        font-size: 18px;
+       margin:0px;
        font-weight: 400;
+       
        color: rgb(3, 3, 3);
       }#channel_name{
-        font-size: 12px;
+        margin:2px;
+        font-size: 10px;
         font-weight: 400;
         color: rgb(3, 3, 3);
       }#description{
-        font-size: 12px;
-        font-weight: 400;
-        color: rgb(3, 3, 3);
+        text-align: justify; 
+        font-size:0px;
+        font-weight: 0;
+        color:white;
       }
 
       
@@ -200,7 +198,7 @@
       );
       response.then((res) => {
         res=res.items;
-        // console.log(res)
+        
 
         appendData(res, data_div);
       });
