@@ -33,6 +33,12 @@
   <link rel="stylesheet" href="./styles/navbar.css" />
   <link rel="stylesheet" href="./styles/sidenav.css" />
 </head>
+  <style>
+    iframe{
+      width:900px;
+      height:506px;
+    }
+  </style>
 <body>
     <div id="body_container">
       <div id="navappend"></div>
@@ -70,5 +76,28 @@
       localStorage.setItem("search",JSON.stringify(video_query));
       window.location.href="./search.html";
     }
+
+    //------------------------------------------------------------------------------------------------
+    let element= JSON.parse(localStorage.getItem("videodetail"))
+    let { id:{videoId},snippet:{channelTitle,description,thumbnails:{high:{url}},title}} =element;
+   
+
+
+
+let div = document.createElement('div')
+div.setAttribute('id','videodiv')
+let name = document.createElement('h3')
+name.textContent = title
+// console.log(title)
+
+let iframe = document.createElement('iframe')
+iframe.src = `https://www.youtube.com/embed/${videoId}`
+
+
+iframe.setAttribute("allowfullscreen", "true")
+
+div.append(iframe,name,description)
+
+document.querySelector('#videos_box').append(div)
 
     </script>

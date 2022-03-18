@@ -26,7 +26,11 @@ function appendData(data,location){
   
         let videobox= document.createElement('div');
 
-        //  videobox.addEventListener('click','display')
+         videobox.addEventListener('click',function(){
+             localStorage.setItem('videodetail',JSON.stringify(element))
+             
+             window.location.href="display.html"
+         })
          
         videobox.setAttribute('id','videobox');
 
