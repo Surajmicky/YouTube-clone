@@ -120,7 +120,7 @@ function call(){
      
 
       let response = getData(
-        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=35&q=${video_query_new}&type=video&key=AIzaSyDoArJw2TLCT6dgFmMK6tVvWSdCgxZd5Ag`
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=35&q=${video_query_new}&type=video&key=AIzaSyCxtvW-ykPzarzhu6ntDLVzgVRDod7TlxA`
       );
       response.then((res) => {
         res=res.items;
@@ -140,7 +140,7 @@ let data_div = document.getElementById("videos_box");
       console.log(video_query);
 
       let response = getData(
-        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=35&q=${video_query}&type=video&key=AIzaSyDoArJw2TLCT6dgFmMK6tVvWSdCgxZd5Ag`
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=35&q=${video_query}&type=video&key=AIzaSyCxtvW-ykPzarzhu6ntDLVzgVRDod7TlxA`
       );
       response.then((res) => {
         res=res.items;
